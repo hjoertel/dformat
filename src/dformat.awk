@@ -1,5 +1,4 @@
 #! /bin/awk -f
-gawk '
 function error(s) { print "dformat error: " s " near input line " NR | "cat 1>&2" }
 
 BEGIN { s =   "recht 0.3        addrht 0.055    recspread 0.15 "
@@ -106,7 +105,6 @@ $1 == "pic"   { $1 = ""; print $0; next }
                 }
               }
 END           { if (inlang) error("eof inside begin/end") }
-' $*
 
 # See :
 # DFORMAT -- A Program for Typesetting Data Formats.
