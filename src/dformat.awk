@@ -1,3 +1,4 @@
+#! /bin/awk -f
 gawk '
 function error(s) { print "dformat error: " s " near input line " NR | "cat 1>&2" }
 
@@ -111,3 +112,4 @@ END           { if (inlang) error("eof inside begin/end") }
 # DFORMAT -- A Program for Typesetting Data Formats.
 # CSTR #142, Jon L. Bentley, Bell Labs, April 1988. 
 # 142.ps.gz
+# original author: mailto:jlb@research.bell-labs.com
